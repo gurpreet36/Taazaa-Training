@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\jagged_array.exe
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\jagged_array.deps.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\jagged_array.runtimeconfig.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\jagged_array.runtimeconfig.dev.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\jagged_array.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\ref\jagged_array.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\bin\Debug\net5.0\jagged_array.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.AssemblyInfo.cs
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\ref\jagged_array.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\jagged_array\obj\Debug\net5.0\jagged_array.genruntimeconfig.cache

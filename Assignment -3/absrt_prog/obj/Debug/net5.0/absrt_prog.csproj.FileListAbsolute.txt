@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\absrt_prog.exe
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\absrt_prog.deps.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\absrt_prog.runtimeconfig.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\absrt_prog.runtimeconfig.dev.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\absrt_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\ref\absrt_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\bin\Debug\net5.0\absrt_prog.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.AssemblyInfo.cs
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\ref\absrt_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\absrt_prog\obj\Debug\net5.0\absrt_prog.genruntimeconfig.cache

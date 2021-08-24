@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\vtandrt.exe
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\vtandrt.deps.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\vtandrt.runtimeconfig.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\vtandrt.runtimeconfig.dev.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\vtandrt.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\ref\vtandrt.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\bin\Debug\net5.0\vtandrt.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.AssemblyInfo.cs
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\ref\vtandrt.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\vtandrt\obj\Debug\net5.0\vtandrt.genruntimeconfig.cache

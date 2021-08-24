@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\interface_prog.exe
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\interface_prog.deps.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\interface_prog.runtimeconfig.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\interface_prog.runtimeconfig.dev.json
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\interface_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\ref\interface_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\bin\Debug\net5.0\interface_prog.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.AssemblyInfo.cs
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\ref\interface_prog.dll
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.pdb
+C:\Users\hp\Desktop\assignment 1\assignment 2\interface_prog\obj\Debug\net5.0\interface_prog.genruntimeconfig.cache
