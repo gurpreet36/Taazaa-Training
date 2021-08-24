@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\dictonaryProgram.exe
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\dictonaryProgram.deps.json
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\dictonaryProgram.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\dictonaryProgram.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\dictonaryProgram.dll
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\ref\dictonaryProgram.dll
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\bin\Debug\net5.0\dictonaryProgram.pdb
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.dll
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\ref\dictonaryProgram.dll
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.pdb
+C:\Users\hp\Desktop\Assignment 5\dictonaryProgram\obj\Debug\net5.0\dictonaryProgram.genruntimeconfig.cache

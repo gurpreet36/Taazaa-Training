@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "privateConstructorProgram/1.0.0": {
+        "runtime": {
+          "privateConstructorProgram.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "privateConstructorProgram/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

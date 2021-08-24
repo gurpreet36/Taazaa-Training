@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\privateConstructorProgram.exe
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\privateConstructorProgram.deps.json
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\privateConstructorProgram.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\privateConstructorProgram.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\privateConstructorProgram.dll
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\ref\privateConstructorProgram.dll
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\bin\Debug\net5.0\privateConstructorProgram.pdb
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.dll
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\ref\privateConstructorProgram.dll
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.pdb
+C:\Users\hp\Desktop\Assignment 5\privateConstructorProgram\obj\Debug\net5.0\privateConstructorProgram.genruntimeconfig.cache

@@ -1,0 +1,32 @@
+C:\Day5\Day5A\bin\Debug\net5.0\Day5A.exe
+C:\Day5\Day5A\bin\Debug\net5.0\Day5A.deps.json
+C:\Day5\Day5A\bin\Debug\net5.0\Day5A.runtimeconfig.json
+C:\Day5\Day5A\bin\Debug\net5.0\Day5A.runtimeconfig.dev.json
+C:\Day5\Day5A\bin\Debug\net5.0\Day5A.dll
+C:\Day5\Day5A\bin\Debug\net5.0\ref\Day5A.dll
+C:\Day5\Day5A\bin\Debug\net5.0\Day5A.pdb
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.csproj.AssemblyReference.cache
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.AssemblyInfoInputs.cache
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.AssemblyInfo.cs
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.csproj.CoreCompileInputs.cache
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.dll
+C:\Day5\Day5A\obj\Debug\net5.0\ref\Day5A.dll
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.pdb
+C:\Day5\Day5A\obj\Debug\net5.0\Day5A.genruntimeconfig.cache
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\Day5A.exe
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\Day5A.deps.json
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\Day5A.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\Day5A.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\Day5A.dll
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\ref\Day5A.dll
+C:\Users\hp\Desktop\Assignment 5\Day5A\bin\Debug\net5.0\Day5A.pdb
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.dll
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\ref\Day5A.dll
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.pdb
+C:\Users\hp\Desktop\Assignment 5\Day5A\obj\Debug\net5.0\Day5A.genruntimeconfig.cache
