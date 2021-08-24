@@ -1,0 +1,16 @@
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\FileHandling.exe
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\FileHandling.deps.json
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\FileHandling.runtimeconfig.json
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\FileHandling.runtimeconfig.dev.json
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\FileHandling.dll
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\ref\FileHandling.dll
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\bin\Debug\net5.0\FileHandling.pdb
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.csproj.AssemblyReference.cache
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.AssemblyInfoInputs.cache
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.AssemblyInfo.cs
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.csproj.CoreCompileInputs.cache
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.dll
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\ref\FileHandling.dll
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.pdb
+D:\TaazaaAssignments\AssignmentSunday1\FileHandling\obj\Debug\net5.0\FileHandling.genruntimeconfig.cache
