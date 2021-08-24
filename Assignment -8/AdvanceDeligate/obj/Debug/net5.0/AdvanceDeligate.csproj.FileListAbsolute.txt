@@ -1,0 +1,16 @@
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.csproj.AssemblyReference.cache
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.GeneratedMSBuildEditorConfig.editorconfig
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.AssemblyInfoInputs.cache
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.AssemblyInfo.cs
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.csproj.CoreCompileInputs.cache
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\AdvanceDeligate.exe
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\AdvanceDeligate.deps.json
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\AdvanceDeligate.runtimeconfig.json
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\AdvanceDeligate.runtimeconfig.dev.json
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\AdvanceDeligate.dll
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\ref\AdvanceDeligate.dll
+D:\Day7A\AdvanceDeligate\bin\Debug\net5.0\AdvanceDeligate.pdb
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.dll
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\ref\AdvanceDeligate.dll
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.pdb
+D:\Day7A\AdvanceDeligate\obj\Debug\net5.0\AdvanceDeligate.genruntimeconfig.cache
