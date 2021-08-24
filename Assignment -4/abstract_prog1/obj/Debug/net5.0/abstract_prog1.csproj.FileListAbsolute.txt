@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\abstract_prog1.exe
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\abstract_prog1.deps.json
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\abstract_prog1.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\abstract_prog1.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\abstract_prog1.dll
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\ref\abstract_prog1.dll
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\bin\Debug\net5.0\abstract_prog1.pdb
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.dll
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\ref\abstract_prog1.dll
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.pdb
+C:\Users\hp\Desktop\Assignment 4\abstract_prog1\obj\Debug\net5.0\abstract_prog1.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\enum_program.exe
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\enum_program.deps.json
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\enum_program.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\enum_program.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\enum_program.dll
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\ref\enum_program.dll
+C:\Users\hp\Desktop\Assignment 4\enum_program\bin\Debug\net5.0\enum_program.pdb
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.dll
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\ref\enum_program.dll
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.pdb
+C:\Users\hp\Desktop\Assignment 4\enum_program\obj\Debug\net5.0\enum_program.genruntimeconfig.cache

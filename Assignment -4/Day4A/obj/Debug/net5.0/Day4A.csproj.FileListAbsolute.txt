@@ -1,0 +1,32 @@
+C:\Users\hp\Day4A\bin\Debug\net5.0\Day4A.exe
+C:\Users\hp\Day4A\bin\Debug\net5.0\Day4A.deps.json
+C:\Users\hp\Day4A\bin\Debug\net5.0\Day4A.runtimeconfig.json
+C:\Users\hp\Day4A\bin\Debug\net5.0\Day4A.runtimeconfig.dev.json
+C:\Users\hp\Day4A\bin\Debug\net5.0\Day4A.dll
+C:\Users\hp\Day4A\bin\Debug\net5.0\ref\Day4A.dll
+C:\Users\hp\Day4A\bin\Debug\net5.0\Day4A.pdb
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.csproj.AssemblyReference.cache
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.AssemblyInfoInputs.cache
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.AssemblyInfo.cs
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.csproj.CoreCompileInputs.cache
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.dll
+C:\Users\hp\Day4A\obj\Debug\net5.0\ref\Day4A.dll
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.pdb
+C:\Users\hp\Day4A\obj\Debug\net5.0\Day4A.genruntimeconfig.cache
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\Day4A.exe
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\Day4A.deps.json
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\Day4A.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\Day4A.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\Day4A.dll
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\ref\Day4A.dll
+C:\Users\hp\Desktop\Assignment 4\Day4A\bin\Debug\net5.0\Day4A.pdb
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.dll
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\ref\Day4A.dll
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.pdb
+C:\Users\hp\Desktop\Assignment 4\Day4A\obj\Debug\net5.0\Day4A.genruntimeconfig.cache

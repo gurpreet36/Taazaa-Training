@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\struct_prog.exe
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\struct_prog.deps.json
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\struct_prog.runtimeconfig.json
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\struct_prog.runtimeconfig.dev.json
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\struct_prog.dll
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\ref\struct_prog.dll
+C:\Users\hp\Desktop\Assignment 4\struct_prog\bin\Debug\net5.0\struct_prog.pdb
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.dll
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\ref\struct_prog.dll
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.pdb
+C:\Users\hp\Desktop\Assignment 4\struct_prog\obj\Debug\net5.0\struct_prog.genruntimeconfig.cache
