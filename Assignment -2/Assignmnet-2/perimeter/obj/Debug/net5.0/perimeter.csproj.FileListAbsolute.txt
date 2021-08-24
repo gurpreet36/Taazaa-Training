@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\bin\Debug\net5.0\perimeter.deps.json
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\bin\Debug\net5.0\perimeter.dll
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\bin\Debug\net5.0\ref\perimeter.dll
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\bin\Debug\net5.0\perimeter.pdb
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.AssemblyInfo.cs
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.dll
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\ref\perimeter.dll
+C:\Users\hp\Desktop\Assignmnet-2\perimeter\obj\Debug\net5.0\perimeter.pdb

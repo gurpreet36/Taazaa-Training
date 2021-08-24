@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "area/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/area.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/area.dll": {}
+        }
+      },
+      "perimeter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/perimeter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/perimeter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "area/1.0.0": {
+      "type": "project",
+      "path": "../area/area.csproj",
+      "msbuildProject": "../area/area.csproj"
+    },
+    "perimeter/1.0.0": {
+      "type": "project",
+      "path": "../perimeter/perimeter.csproj",
+      "msbuildProject": "../perimeter/perimeter.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "area >= 1.0.0",
+      "perimeter >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\Assignmnet-2\\App1\\App1.csproj",
+      "projectName": "App1",
+      "projectPath": "C:\\Users\\hp\\Desktop\\Assignmnet-2\\App1\\App1.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\Assignmnet-2\\App1\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\hp\\Desktop\\Assignmnet-2\\area\\area.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Assignmnet-2\\area\\area.csproj"
+            },
+            "C:\\Users\\hp\\Desktop\\Assignmnet-2\\perimeter\\perimeter.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Assignmnet-2\\perimeter\\perimeter.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
