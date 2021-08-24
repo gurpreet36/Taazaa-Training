@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\Array3.exe
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\Array3.deps.json
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\Array3.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\Array3.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\Array3.dll
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\ref\Array3.dll
+C:\Users\lenovo\Desktop\Assignment  10\Array3\bin\Debug\net5.0\Array3.pdb
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.dll
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\ref\Array3.dll
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.pdb
+C:\Users\lenovo\Desktop\Assignment  10\Array3\obj\Debug\net5.0\Array3.genruntimeconfig.cache

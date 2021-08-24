@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\Assignment-10.exe
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\Assignment-10.deps.json
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\Assignment-10.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\Assignment-10.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\Assignment-10.dll
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\ref\Assignment-10.dll
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\bin\Debug\net5.0\Assignment-10.pdb
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.dll
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\ref\Assignment-10.dll
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.pdb
+C:\Users\lenovo\Desktop\Assignment  10\Assignment-10\obj\Debug\net5.0\Assignment-10.genruntimeconfig.cache
