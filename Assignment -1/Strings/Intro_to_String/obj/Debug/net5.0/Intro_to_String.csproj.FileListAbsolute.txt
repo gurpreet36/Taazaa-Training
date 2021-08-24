@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.AssemblyInfo.cs
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\Intro_to_String.exe
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\Intro_to_String.deps.json
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\Intro_to_String.runtimeconfig.json
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\Intro_to_String.runtimeconfig.dev.json
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\Intro_to_String.dll
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\ref\Intro_to_String.dll
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\bin\Debug\net5.0\Intro_to_String.pdb
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.dll
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\ref\Intro_to_String.dll
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.pdb
+C:\Users\hp\Desktop\assignment 1\Strings\Intro_to_String\obj\Debug\net5.0\Intro_to_String.genruntimeconfig.cache

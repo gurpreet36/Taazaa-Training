@@ -1,0 +1,16 @@
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\intro_to_loop.exe
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\intro_to_loop.deps.json
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\intro_to_loop.runtimeconfig.json
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\intro_to_loop.runtimeconfig.dev.json
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\intro_to_loop.dll
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\ref\intro_to_loop.dll
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\bin\Debug\net5.0\intro_to_loop.pdb
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.AssemblyInfo.cs
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.dll
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\ref\intro_to_loop.dll
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.pdb
+C:\Users\hp\Desktop\assignment 1\intro_to_loop\obj\Debug\net5.0\intro_to_loop.genruntimeconfig.cache
