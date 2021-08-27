@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\lamda_method_program.exe
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\lamda_method_program.deps.json
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\lamda_method_program.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\lamda_method_program.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\lamda_method_program.dll
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\ref\lamda_method_program.dll
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\bin\Debug\net5.0\lamda_method_program.pdb
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.dll
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\ref\lamda_method_program.dll
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.pdb
+C:\Users\lenovo\Desktop\Assignment-12\lamda_method_program\obj\Debug\net5.0\lamda_method_program.genruntimeconfig.cache

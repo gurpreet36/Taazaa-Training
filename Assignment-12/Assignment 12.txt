@@ -1,0 +1,219 @@
+____________________________________________________________________________________
+Delegate
+_____________________________________________________________________________________
+using System;
+using Program_Delegate.DelegateClasses;
+delegate int delegater(int a);
+delegate int delegaterRec(int a,int b);
+
+namespace Program_Delegate
+{
+    class AreaFinder
+    { 
+        public static void Main()
+        {
+            var delegateClass=new DelegateClass();
+            var objSqr=new delegater(delegateClass.areaSq);
+            var p1=objSqr.Invoke(25);
+            var objRec=new delegaterRec(delegateClass.areaRec);
+            var p2=objRec.Invoke(25,35);
+            objSqr+=delegateClass.areaCir;
+            var p3=objSqr.Invoke(35);
+            Console.WriteLine(p1+" "+p2+" "+p3);
+
+
+
+        }
+    }
+}
+
+_____________________________________________________________________________________
+Func<T,Tval>
+_____________________________________________________________________________________
+using System;
+
+namespace Func_Delegate
+{
+    class Program
+    {
+        static int Addition(int a, int b)
+            {
+                return a + b;
+            }
+        static int Multiplication(int a, int b)
+            {
+                return a * b;
+            }
+            
+        static void Main(string[] args)
+            {
+                Func<int, int, int> mul = Multiplication;
+                int result = mul(30, 10);
+                Console.WriteLine(result);
+                Func<int, int, int> add = Addition;
+                int result1 = add(30, 10);
+                Console.WriteLine(result1);
+            }
+    
+    }
+}
+
+_____________________________________________________________________________________________________
+Action<> program
+_____________________________________________________________________________________
+using System;
+
+namespace Action_Delegate
+{
+    class Program
+    {
+        
+        public static void message(int a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
+        static public void Main()
+        {
+            Action<int, int> val = message;
+            val(30,10);
+        } 
+        
+    }
+}
+
+_____________________________________________________________________________________
+predicate<>
+______________________________________________________________________________________
+using System;
+
+namespace Predicate_Delegate
+{
+    class Program
+    {
+        public static bool message(string mystring)
+        {
+            if (mystring.Length < 9)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static public void Main()
+        {
+            Predicate<string> val = message;
+            Console.WriteLine(val("Gurpreet Singh"));
+        }
+    }
+}
+
+
+_____________________________________________________________________________________
+Anonymous method
+______________________________________________________________________________________
+using System;
+delegate void dobj();
+namespace Anonymous_Method
+{
+    class AnonymousMethodProgram
+    {
+        public static void Main()
+        {
+            dobj obj=delegate()
+            {
+                Console.WriteLine("Anonymous_Method work this way !!!!!");
+            };
+            dobj obj2=delegate()
+            {
+                int a=10;
+                int b=20;
+                Console.WriteLine("Anonymous add function result of A+B = "+a+b);
+            };
+            obj();
+            obj2();
+
+        }
+    }
+}
+
+______________________________________________________________________________________
+lamda program
+______________________________________________________________________________________
+using System;
+delegate void dobj(int a,int b); 
+
+namespace lamda_method_program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            dobj add=(int a, int b)=>
+            {
+                Console.WriteLine(a+b);
+            };
+            dobj sub=(int a, int b)=>
+            {
+                Console.WriteLine(a-b);
+            };
+                dobj mul=(int a, int b)=>
+            {
+                Console.WriteLine(a*b);
+            };
+                dobj div=(int a, int b)=>
+            {
+                Console.WriteLine(a/b);
+            };
+            add(10,20);
+            sub(10,20);
+            mul(10,20);
+            div(10,20);
+
+        }
+    }
+}
+
+______________________________________________________________________________________
+linq program
+_______________________________________________________________________________________
+
+using System;
+using System.Linq;
+
+namespace Linq_Program
+{
+    class Program
+    {
+        public  static void Main()
+        {
+            int[] n={1,2,3,4,5,9,8,7,6};
+            // linq query is same as the query that we are using to fetch the data from table  in linque we basically use language integrated query
+            // on the array to get the data as we want depend on query clause
+
+            
+            var resul= from i in n select i;
+            foreach(var i in resul)
+            {
+                Console.Write(i+" ");
+            }
+            Console.WriteLine();
+
+            //fetching data in the ascending order
+            var result= from i in n orderby i ascending select i;
+            foreach(var i in result)
+            {
+                Console.Write(i+" ");
+            }
+            Console.WriteLine();
+
+            //fetching data in the desending order
+            var result1= from i in n  orderby i descending select i;
+            foreach(var i in result1)
+            {
+                Console.Write(i+" ");
+            }
+        }
+    }
+}

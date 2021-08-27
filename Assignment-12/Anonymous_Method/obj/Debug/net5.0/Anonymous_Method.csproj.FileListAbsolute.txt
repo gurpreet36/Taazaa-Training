@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.dll
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\ref\Anonymous_Method.dll
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\Anonymous_Method.exe
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\Anonymous_Method.deps.json
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\Anonymous_Method.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\Anonymous_Method.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\Anonymous_Method.dll
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\ref\Anonymous_Method.dll
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\bin\Debug\net5.0\Anonymous_Method.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Anonymous_Method\obj\Debug\net5.0\Anonymous_Method.genruntimeconfig.cache

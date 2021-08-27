@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\Func_Delegate.exe
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\Func_Delegate.deps.json
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\Func_Delegate.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\Func_Delegate.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\Func_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\ref\Func_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\bin\Debug\net5.0\Func_Delegate.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\ref\Func_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Func_Delegate\obj\Debug\net5.0\Func_Delegate.genruntimeconfig.cache

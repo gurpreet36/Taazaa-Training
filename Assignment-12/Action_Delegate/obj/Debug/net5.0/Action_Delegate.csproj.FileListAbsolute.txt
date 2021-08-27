@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\Action_Delegate.exe
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\Action_Delegate.deps.json
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\Action_Delegate.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\Action_Delegate.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\Action_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\ref\Action_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\bin\Debug\net5.0\Action_Delegate.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\ref\Action_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Action_Delegate\obj\Debug\net5.0\Action_Delegate.genruntimeconfig.cache

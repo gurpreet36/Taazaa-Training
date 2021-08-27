@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\Linq_Program.exe
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\Linq_Program.deps.json
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\Linq_Program.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\Linq_Program.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\Linq_Program.dll
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\ref\Linq_Program.dll
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\bin\Debug\net5.0\Linq_Program.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.dll
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\ref\Linq_Program.dll
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Linq_Program\obj\Debug\net5.0\Linq_Program.genruntimeconfig.cache

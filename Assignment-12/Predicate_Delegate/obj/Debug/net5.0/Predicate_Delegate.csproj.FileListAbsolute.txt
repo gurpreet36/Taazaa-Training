@@ -1,0 +1,16 @@
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\Predicate_Delegate.exe
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\Predicate_Delegate.deps.json
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\Predicate_Delegate.runtimeconfig.json
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\Predicate_Delegate.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\Predicate_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\ref\Predicate_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\bin\Debug\net5.0\Predicate_Delegate.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\ref\Predicate_Delegate.dll
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.pdb
+C:\Users\lenovo\Desktop\Assignment-12\Predicate_Delegate\obj\Debug\net5.0\Predicate_Delegate.genruntimeconfig.cache
