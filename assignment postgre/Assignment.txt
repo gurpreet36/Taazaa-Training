@@ -1,0 +1,2367 @@
+27-08-2021 
+how to Declare a variable in database?
+
+link 1:-https://www.postgresqltutorial.com/plpgsql-variables/
+link 2:- https://www.techonthenet.com/postgresql/declare_vars.php#:~:text=The%20syntax%20to%20declare%20a%20variable%20in%20PostgreSQL,The%20datatype%20to%20assign%20to%20the%20variable.%20Optional.
+___________________________________________________________________________________________________________________________________________________
+The syntax to declare a variable in PostgreSQL is:
+________________________________________________
+DO
+Name
+DO -- execute an anonymous code block
+Synopsis
+DO [ LANGUAGE lang_name ] code
+Description
+DO executes an anonymous code block, or in other words a transient anonymous function in a procedural language.
+
+The code block is treated as though it were the body of a function with no parameters, returning void. It is parsed and executed a single time.
+
+The optional LANGUAGE clause can be written either before or after the code block.
+_______________________________________________
+do $$
+declare
+   id    integer := 1;
+   name varchar(50) := 'John';
+   age  numeric(10,2) := 22;
+begin 
+   raise notice '% % %', 
+           id, 
+	   name, 
+	   age;
+end $$;
+__________________________________________________
+
+DECLARE variable_name [ CONSTANT ] datatype [ NOT NULL ] [ { DEFAULT | := } initial_value ]
+postgres=# \c gurpreet_singh;
+You are now connected to database "gurpreet_singh" as user "postgres".
+gurpreet_singh=# \d
+                   List of relations
+ Schema |          Name          |   Type   |  Owner
+--------+------------------------+----------+----------
+ public | department             | table    | postgres
+ public | department_dept_id_seq | sequence | postgres
+ public | employee               | table    | postgres
+ public | employee_emp_id_seq    | sequence | postgres
+ public | employees              | table    | postgres
+(5 rows)
+
+
+gurpreet_singh=# do $$
+gurpreet_singh$# declare
+gurpreet_singh$#    id    integer := 1;
+gurpreet_singh$#    name varchar(50) := 'John';
+gurpreet_singh$#    age  numeric(10,2) := 22;
+gurpreet_singh$# begin
+gurpreet_singh$#    raise notice '% % %',
+gurpreet_singh$#            id,
+gurpreet_singh$#    name,
+gurpreet_singh$#    age;
+gurpreet_singh$# end $$;
+NOTICE:  1 John 22.00
+DO
+gurpreet_singh=# do $$
+gurpreet_singh$# declare
+gurpreet_singh$#    ctime time := now();
+gurpreet_singh$# begin
+gurpreet_singh$#    raise notice '%',ctime ;
+gurpreet_singh$# end $$;
+NOTICE:  15:37:06.388389
+DO
+gurpreet_singh=#
+
+________________________________________________________________________________
+
+Parameters or Arguments:-
+_________________________
+1)variable_name :The name to assign to the variable.
+2)CONSTANT:Optional. If specified, the value of the variable can not be changed after the variable has been initialized.
+3)datatype:The datatype to assign to the variable.
+4)NOT NULL:Optional. If specified, the variable can not contain a NULL value.
+5)initial_value:Optional. It is the value initially assigned to the variable when it is declared. If an initial_value is not specified, the variable is assigned a value of NULL.
+
+
+    
+___________________________________________________________________________________
+how to apply loop?
+link:- https://www.geeksforgeeks.org/postgresql-for-loops/
+
+for cnt in 1..10 loop //opening
+end loop;// closing
+
+gurpreet_singh=# do $$
+gurpreet_singh$# begin
+gurpreet_singh$# for a in 1..10 loop
+gurpreet_singh$# raise notice 'value of a % ',a;
+gurpreet_singh$# end loop;
+gurpreet_singh$# end ; $$
+gurpreet_singh-# ;
+NOTICE:  value of a 1
+NOTICE:  value of a 2
+NOTICE:  value of a 3
+NOTICE:  value of a 4
+NOTICE:  value of a 5
+NOTICE:  value of a 6
+NOTICE:  value of a 7
+NOTICE:  value of a 8
+NOTICE:  value of a 9
+NOTICE:  value of a 10
+DO
+gurpreet_singh=#
+
+for cnt in reverse 10..1 loop
+
+do $$
+begin
+for a in reverse 10..1 loop
+raise notice 'value of a = %',a;
+end loop;
+end ;$$;
+
+gurpreet_singh=# do $$
+gurpreet_singh$# begin
+gurpreet_singh$# for a in reverse 10..1 loop
+gurpreet_singh$# raise notice 'value of a = %',a;
+gurpreet_singh$# end loop;
+gurpreet_singh$# end ;$$;
+NOTICE:  value of a = 10
+NOTICE:  value of a = 9
+NOTICE:  value of a = 8
+NOTICE:  value of a = 7
+NOTICE:  value of a = 6
+NOTICE:  value of a = 5
+NOTICE:  value of a = 4
+NOTICE:  value of a = 3
+NOTICE:  value of a = 2
+NOTICE:  value of a = 1
+DO
+gurpreet_singh=#
+
+____________________________________________________________________________________
+
+how to apply break?
+
+There is no BREAK in PL/pgSQL.
+EXIT terminates the loop.
+
+                           exit when counter > 10;
+
+The exit statement allows you to terminate a loop including an unconditional loop, a while loop, and a for loop.
+
+
+
+how to apply continue?
+how to apply switch?
+
+how to apply if-else?
+
+gurpreet_singh=# do $$
+gurpreet_singh$# declare
+gurpreet_singh$# val integer :=14;
+gurpreet_singh$# begin
+gurpreet_singh$# if val<15 then
+gurpreet_singh$# raise notice 'value is less then 15';
+gurpreet_singh$# end if;
+gurpreet_singh$# end ; $$;
+NOTICE:  value is less then 15
+DO
+gurpreet_singh=#
+
+
+gurpreet_singh=# do $$
+gurpreet_singh$# declare
+gurpreet_singh$# val integer :=14;
+gurpreet_singh$# begin
+gurpreet_singh$# if val<15 then
+gurpreet_singh$# raise notice 'value is less then 15';
+gurpreet_singh$# else
+gurpreet_singh$# raise notice 'value is accepted i.e. %',val;
+gurpreet_singh$# end if;
+gurpreet_singh$# end  $$;
+NOTICE:  value is less then 15
+DO
+gurpreet_singh=# do $$
+gurpreet_singh$# declare
+gurpreet_singh$# val integer :=30;
+gurpreet_singh$# begin
+gurpreet_singh$# if val<15 then
+gurpreet_singh$# raise notice 'value is less then 15';
+gurpreet_singh$# else
+gurpreet_singh$# raise notice 'value is accepted i.e. %',val;
+gurpreet_singh$# end if;
+gurpreet_singh$# end ; $$;
+NOTICE:  value is accepted i.e. 30
+DO
+gurpreet_singh=#
+
+
+how to use begin-end?
+gurpreet_singh=# do $$
+gurpreet_singh$# begin
+gurpreet_singh$# raise notice ' let see working of begin and end !!!';
+gurpreet_singh$# end;$$;
+NOTICE:   let see working of begin and end !!!
+DO
+gurpreet_singh=#
+
+
+association of an object with the overloading function is called static polymorphism.
+mechanism to enhance the capablity of the object is called polymorphism by the help of function overloading or overriding is called polymorphism
+and when an object is associated with the overloaded function is called static polymorphism.
+
+
+psql (13.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \\l
+invalid command \
+Try \? for help.
+postgres=# \l
+                                                   List of databases
+      Name      |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges   ----------------+----------+----------+----------------------------+----------------------------+----------------------- day13p         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ day9           | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ dbname         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ gurpreet       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ gurpreet_singh | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ mickey         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ postgres       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ projectdb      | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ taazaadbs      | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0      | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +                |          |          |                            |                            | postgres=CTc/postgres
+ template1      | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +                |          |          |                            |                            | postgres=CTc/postgres
+ usermanagement | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+(12 rows)
+
+
+postgres=# create database Day15G
+postgres-# ;
+CREATE DATABASE
+postgres=# \l
+                                                   List of databases
+      Name      |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges   ----------------+----------+----------+----------------------------+----------------------------+----------------------- day13p         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ day15g         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ day9           | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ dbname         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ gurpreet       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ gurpreet_singh | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ mickey         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ postgres       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ projectdb      | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ taazaadbs      | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0      | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +                |          |          |                            |                            | postgres=CTc/postgres
+ template1      | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +                |          |          |                            |                            | postgres=CTc/postgres
+ usermanagement | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+(13 rows)
+
+
+postgres=# \c day15g
+You are now connected to database "day15g" as user "postgres".
+day15g=# create table SelfTaazaa(
+day15g(# emp_No int generated always as identity,
+day15g(# emp_id int primary key not null,
+day15g(# emp_name varchar(20) not null,
+day15g(# emp_phone_no numeric,
+day15g(# date_of_join date default current_date,
+day15g(# time_of_join time default current_time,
+day15g(# dept_id int);
+CREATE TABLE
+day15g=# \d;
+invalid command \d;
+Try \? for help.
+day15g=# \l;
+invalid command \l;
+Try \? for help.
+day15g=# /d;
+ERROR:  syntax error at or near "/"
+LINE 1: /d;
+        ^
+day15g=# \m
+invalid command \m
+Try \? for help.
+day15g=# \?
+General
+  \copyright             show PostgreSQL usage and distribution terms
+  \crosstabview [COLUMNS] execute query and display results in crosstab
+  \errverbose            show most recent error message at maximum verbosity
+  \g [(OPTIONS)] [FILE]  execute query (and send results to file or |pipe);
+                         \g with no arguments is equivalent to a semicolon
+  \gdesc                 describe result of query, without executing it
+  \gexec                 execute query, then execute each value in its result
+  \gset [PREFIX]         execute query and store results in psql variables
+  \gx [(OPTIONS)] [FILE] as \g, but forces expanded output mode
+  \q                     quit psql
+  \watch [SEC]           execute query every SEC seconds
+
+Help
+  \? [commands]          show help on backslash commands
+  \? options             show help on psql command-line options
+  \? variables           show help on special variables
+  \h [NAME]              help on syntax of SQL commands, * for all commands
+
+Query Buffer
+  \e [FILE] [LINE]       edit the query buffer (or file) with external editor
+  \ef [FUNCNAME [LINE]]  edit function definition with external editor
+  \ev [VIEWNAME [LINE]]  edit view definition with external editor
+  \p                     show the contents of the query buffer
+  \r                     reset (clear) the query buffer
+  \w FILE                write query buffer to file
+
+Input/Output
+  \copy ...              perform SQL COPY with data stream to the client host
+  \echo [-n] [STRING]    write string to standard output (-n for no newline)
+  \i FILE                execute commands from file
+  \ir FILE               as \i, but relative to location of current script
+  \o [FILE]              send all query results to file or |pipe
+  \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
+  \warn [-n] [STRING]    write string to standard error (-n for no newline)
+
+Conditional
+  \if EXPR               begin conditional block
+  \elif EXPR             alternative within current conditional block
+  \else                  final alternative within current conditional block
+  \endif                 end conditional block
+
+Informational
+  (options: S = show system objects, + = additional detail)
+  \d[S+]                 list tables, views, and sequences
+  \d[S+]  NAME           describe table, view, sequence, or index
+  \da[S]  [PATTERN]      list aggregates
+  \dA[+]  [PATTERN]      list access methods
+  \dAc[+] [AMPTRN [TYPEPTRN]]  list operator classes
+  \dAf[+] [AMPTRN [TYPEPTRN]]  list operator families
+  \dAo[+] [AMPTRN [OPFPTRN]]   list operators of operator families
+  \dAp[+] [AMPTRN [OPFPTRN]]   list support functions of operator families
+  \db[+]  [PATTERN]      list tablespaces
+  \dc[S+] [PATTERN]      list conversions
+  \dC[+]  [PATTERN]      list casts
+  \dd[S]  [PATTERN]      show object descriptions not displayed elsewhere
+  \dD[S+] [PATTERN]      list domains
+  \ddp    [PATTERN]      list default privileges
+  \dE[S+] [PATTERN]      list foreign tables
+  \det[+] [PATTERN]      list foreign tables
+  \des[+] [PATTERN]      list foreign servers
+  \deu[+] [PATTERN]      list user mappings
+  \dew[+] [PATTERN]      list foreign-data wrappers
+  \df[anptw][S+] [PATRN] list [only agg/normal/procedures/trigger/window] functions
+  \dF[+]  [PATTERN]      list text search configurations
+  \dFd[+] [PATTERN]      list text search dictionaries
+  \dFp[+] [PATTERN]      list text search parsers
+  \dFt[+] [PATTERN]      list text search templates
+  \dg[S+] [PATTERN]      list roles
+  \di[S+] [PATTERN]      list indexes
+  \dl                    list large objects, same as \lo_list
+  \dL[S+] [PATTERN]      list procedural languages
+  \dm[S+] [PATTERN]      list materialized views
+  \dn[S+] [PATTERN]      list schemas
+  \do[S+] [PATTERN]      list operators
+  \dO[S+] [PATTERN]      list collations
+  \dp     [PATTERN]      list table, view, and sequence access privileges
+  \dP[itn+] [PATTERN]    list [only index/table] partitioned relations [n=nested]
+  \drds [PATRN1 [PATRN2]] list per-database role settings
+  \dRp[+] [PATTERN]      list replication publications
+  \dRs[+] [PATTERN]      list replication subscriptions
+  \ds[S+] [PATTERN]      list sequences
+  \dt[S+] [PATTERN]      list tables
+  \dT[S+] [PATTERN]      list data types
+  \du[S+] [PATTERN]      list roles
+  \dv[S+] [PATTERN]      list views
+  \dx[+]  [PATTERN]      list extensions
+  \dy[+]  [PATTERN]      list event triggers
+  \l[+]   [PATTERN]      list databases
+  \sf[+]  FUNCNAME       show a function's definition
+  \sv[+]  VIEWNAME       show a view's definition
+  \z      [PATTERN]      same as \dp
+
+Formatting
+  \a                     toggle between unaligned and aligned output mode
+  \C [STRING]            set table title, or unset if none
+  \f [STRING]            show or set field separator for unaligned query output
+  \H                     toggle HTML output mode (currently off)
+  \pset [NAME [VALUE]]   set table output option
+                         (border|columns|csv_fieldsep|expanded|fieldsep|
+                         fieldsep_zero|footer|format|linestyle|null|
+                         numericlocale|pager|pager_min_lines|recordsep|
+                         recordsep_zero|tableattr|title|tuples_only|
+                         unicode_border_linestyle|unicode_column_linestyle|
+                         unicode_header_linestyle)
+  \t [on|off]            show only rows (currently off)
+  \T [STRING]            set HTML <table> tag attributes, or unset if none
+  \x [on|off|auto]       toggle expanded output (currently off)
+
+Connection
+  \c[onnect] {[DBNAME|- USER|- HOST|- PORT|-] | conninfo}
+                         connect to new database (currently "day15g")
+  \conninfo              display information about current connection
+  \encoding [ENCODING]   show or set client encoding
+  \password [USERNAME]   securely change the password for a user
+
+Operating System
+  \cd [DIR]              change the current working directory
+  \setenv NAME [VALUE]   set or unset environment variable
+  \timing [on|off]       toggle timing of commands (currently off)
+  \! [COMMAND]           execute command in shell or start interactive shell
+
+Variables
+  \prompt [TEXT] NAME    prompt user to set internal variable
+  \set [NAME [VALUE]]    set internal variable, or list all if no parameters
+  \unset NAME            unset (delete) internal variable
+
+Large Objects
+  \lo_export LOBOID FILE
+  \lo_import FILE [COMMENT]
+  \lo_list
+  \lo_unlink LOBOID      large object operations
+
+day15g=#
+day15g=#
+day15g=#
+day15g=#
+day15g=#
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(15768,'Gurpreet',9717983635,101);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(16768,'rohan',7827656364,101);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(16768,'Abhishek',7827666364,102);
+ERROR:  duplicate key value violates unique constraint "selftaazaa_pkey"
+DETAIL:  Key (emp_id)=(16768) already exists.
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(17768,'Abhishek',7827666364,102);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(18768,'Raman',7227666364,103);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(18768,'max',9227666364,101);
+ERROR:  duplicate key value violates unique constraint "selftaazaa_pkey"
+DETAIL:  Key (emp_id)=(18768) already exists.
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(19768,'max',9227666364,101);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(20768,'ben',9237666364,102);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(21768,'Salman',9137666364,101);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(22768,'Salman khan',9237666364,103);
+INSERT 0 1
+day15g=# insert into SelfTaazaa(emp_id,emp_name,emp_phone_no,dept_id) values(23768,'Mukesh',9137666364,104);
+INSERT 0 1
+day15g=#
+day15g=# select * from SelfTaazaa;
+ emp_no | emp_id |  emp_name   | emp_phone_no | date_of_join |  time_of_join   | dept_id
+--------+--------+-------------+--------------+--------------+-----------------+---------
+      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+(9 rows)
+
+
+day15g=# create table dept(
+day15g(# dept_id int primary key not null;
+day15g(# deot_name varchar(30) not null;
+day15g(# 0;
+day15g(# );
+ERROR:  syntax error at or near ";"
+LINE 2: dept_id int primary key not null;
+                                        ^
+day15g=# create table dept(
+day15g(# dept_id int primary key not null,
+day15g(# deot_name varchar(30) not null);
+CREATE TABLE
+day15g=# insert into dept values(101,'Admin');
+INSERT 0 1
+day15g=# insert into dept values(102,'Support');
+INSERT 0 1
+day15g=# insert into dept values(103,'HR');
+INSERT 0 1
+day15g=# insert into dept values(104,'BD');
+INSERT 0 1
+day15g=# select * from dept;
+ dept_id | deot_name
+---------+-----------
+     101 | Admin
+     102 | Support
+     103 | HR
+     104 | BD
+(4 rows)
+
+
+day15g=# alter table dept rename column deot_name set dept_name;
+ERROR:  syntax error at or near "set"
+LINE 1: alter table dept rename column deot_name set dept_name;
+                                                 ^
+day15g=# alter table dept rename column deot_name as dept_name;
+ERROR:  syntax error at or near "as"
+LINE 1: alter table dept rename column deot_name as dept_name;
+                                                 ^
+day15g=# alter table dept rename column deot_name to dept_name;
+ALTER TABLE
+day15g=# select * from dept_name;
+ERROR:  relation "dept_name" does not exist
+LINE 1: select * from dept_name;
+                      ^
+day15g=# select * from dept;
+ dept_id | dept_name
+---------+-----------
+     101 | Admin
+     102 | Support
+     103 | HR
+     104 | BD
+(4 rows)
+
+
+day15g=# alter table SelfTaazaa alter column dept_id type int foreign key(dept_id) references dept(dept_id);
+ERROR:  syntax error at or near "foreign"
+LINE 1: ...er table SelfTaazaa alter column dept_id type int foreign ke...
+                                                             ^
+day15g=# alter table SelfTaazaa add constraint fkdeptid foreign key(dept_id) references dept.dept_id;
+ERROR:  schema "dept" does not exist
+day15g=# alter table SelfTaazaa add constraint fkdeptid foreign key(dept_id) references dept(dept_id);
+ALTER TABLE
+day15g=#
+day15g=#
+day15g=#
+day15g=# select * from dept,SelfTaazaa;
+ dept_id | dept_name | emp_no | emp_id |  emp_name   | emp_phone_no | date_of_join |  time_of_join   | dept_id
+---------+-----------+--------+--------+-------------+--------------+--------------+-----------------+---------
+     101 | Admin     |      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+     101 | Admin     |      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+     101 | Admin     |      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+     101 | Admin     |      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+     101 | Admin     |      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+     101 | Admin     |      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+     101 | Admin     |      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     101 | Admin     |     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     101 | Admin     |     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+     102 | Support   |      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+     102 | Support   |      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+     102 | Support   |      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+     102 | Support   |      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+     102 | Support   |      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+     102 | Support   |      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+     102 | Support   |      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     102 | Support   |     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     102 | Support   |     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+     103 | HR        |      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+     103 | HR        |      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+     103 | HR        |      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+     103 | HR        |      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+     103 | HR        |      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+     103 | HR        |      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+     103 | HR        |      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     103 | HR        |     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     103 | HR        |     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+     104 | BD        |      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+     104 | BD        |      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+     104 | BD        |      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+     104 | BD        |      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+     104 | BD        |      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+     104 | BD        |      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+     104 | BD        |      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     104 | BD        |     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     104 | BD        |     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+(36 rows)
+
+
+day15g=# select * from dept;
+ dept_id | dept_name
+---------+-----------
+     101 | Admin
+     102 | Support
+     103 | HR
+     104 | BD
+(4 rows)
+
+
+day15g=# select * from SelfTaazaa;
+ emp_no | emp_id |  emp_name   | emp_phone_no | date_of_join |  time_of_join   | dept_id
+--------+--------+-------------+--------------+--------------+-----------------+---------
+      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+(9 rows)
+
+
+day15g=# create view as select empid,emp_name,emp_phone_no from SelfTaazaa;
+ERROR:  syntax error at or near "as"
+LINE 1: create view as select empid,emp_name,emp_phone_no from SelfT...
+                    ^
+day15g=# create view viewSelfTaazaa as select empid,emp_name,emp_phone_no from SelfTaazaa;
+ERROR:  column "empid" does not exist
+LINE 1: create view viewSelfTaazaa as select empid,emp_name,emp_phon...
+                                             ^
+HINT:  Perhaps you meant to reference the column "selftaazaa.emp_id".
+day15g=# create view viewSelfTaazaa as select emp_id,emp_name,emp_phone_no from SelfTaazaa;
+CREATE VIEW
+day15g=# select * fromviewSelfTaazaa;
+ERROR:  syntax error at or near "fromviewSelfTaazaa"
+LINE 1: select * fromviewSelfTaazaa;
+                 ^
+day15g=# select * from viewSelfTaazaa;
+ emp_id |  emp_name   | emp_phone_no
+--------+-------------+--------------
+  15768 | Gurpreet    |   9717983635
+  16768 | rohan       |   7827656364
+  17768 | Abhishek    |   7827666364
+  18768 | Raman       |   7227666364
+  19768 | max         |   9227666364
+  20768 | ben         |   9237666364
+  21768 | Salman      |   9137666364
+  22768 | Salman khan |   9237666364
+  23768 | Mukesh      |   9137666364
+(9 rows)
+
+
+day15g=# create view viewDept as select * from SelfTaazaa;
+CREATE VIEW
+day15g=# select * from viewDept;
+ emp_no | emp_id |  emp_name   | emp_phone_no | date_of_join |  time_of_join   | dept_id
+--------+--------+-------------+--------------+--------------+-----------------+---------
+      1 |  15768 | Gurpreet    |   9717983635 | 2021-09-02   | 08:40:06.008901 |     101
+      2 |  16768 | rohan       |   7827656364 | 2021-09-02   | 08:40:46.786416 |     101
+      4 |  17768 | Abhishek    |   7827666364 | 2021-09-02   | 08:41:30.146781 |     102
+      5 |  18768 | Raman       |   7227666364 | 2021-09-02   | 08:42:07.630946 |     103
+      7 |  19768 | max         |   9227666364 | 2021-09-02   | 08:42:41.123282 |     101
+      8 |  20768 | ben         |   9237666364 | 2021-09-02   | 08:43:08.289266 |     102
+      9 |  21768 | Salman      |   9137666364 | 2021-09-02   | 08:44:07.686533 |     101
+     10 |  22768 | Salman khan |   9237666364 | 2021-09-02   | 08:44:27.261475 |     103
+     11 |  23768 | Mukesh      |   9137666364 | 2021-09-02   | 08:44:55.3374   |     104
+(9 rows)
+
+
+day15g=# drop view viewDept;
+DROP VIEW
+day15g=# create view viewDept as select * from dept;
+CREATE VIEW
+day15g=# select * from viewDept;
+ dept_id | dept_name
+---------+-----------
+     101 | Admin
+     102 | Support
+     103 | HR
+     104 | BD
+(4 rows)
+
+
+day15g=# create view viewdata as select emp_id,emp_name,emp_phone_no,a.dept_id,b.dept_name from SelfTaazaa a,dept b;
+CREATE VIEW
+day15g=# select * from viewdata;
+ emp_id |  emp_name   | emp_phone_no | dept_id | dept_name
+--------+-------------+--------------+---------+-----------
+  15768 | Gurpreet    |   9717983635 |     101 | Admin
+  16768 | rohan       |   7827656364 |     101 | Admin
+  17768 | Abhishek    |   7827666364 |     102 | Admin
+  18768 | Raman       |   7227666364 |     103 | Admin
+  19768 | max         |   9227666364 |     101 | Admin
+  20768 | ben         |   9237666364 |     102 | Admin
+  21768 | Salman      |   9137666364 |     101 | Admin
+  22768 | Salman khan |   9237666364 |     103 | Admin
+  23768 | Mukesh      |   9137666364 |     104 | Admin
+  15768 | Gurpreet    |   9717983635 |     101 | Support
+  16768 | rohan       |   7827656364 |     101 | Support
+  17768 | Abhishek    |   7827666364 |     102 | Support
+  18768 | Raman       |   7227666364 |     103 | Support
+  19768 | max         |   9227666364 |     101 | Support
+  20768 | ben         |   9237666364 |     102 | Support
+  21768 | Salman      |   9137666364 |     101 | Support
+  22768 | Salman khan |   9237666364 |     103 | Support
+  23768 | Mukesh      |   9137666364 |     104 | Support
+  15768 | Gurpreet    |   9717983635 |     101 | HR
+  16768 | rohan       |   7827656364 |     101 | HR
+  17768 | Abhishek    |   7827666364 |     102 | HR
+  18768 | Raman       |   7227666364 |     103 | HR
+  19768 | max         |   9227666364 |     101 | HR
+  20768 | ben         |   9237666364 |     102 | HR
+  21768 | Salman      |   9137666364 |     101 | HR
+  22768 | Salman khan |   9237666364 |     103 | HR
+  23768 | Mukesh      |   9137666364 |     104 | HR
+  15768 | Gurpreet    |   9717983635 |     101 | BD
+  16768 | rohan       |   7827656364 |     101 | BD
+  17768 | Abhishek    |   7827666364 |     102 | BD
+  18768 | Raman       |   7227666364 |     103 | BD
+  19768 | max         |   9227666364 |     101 | BD
+  20768 | ben         |   9237666364 |     102 | BD
+  21768 | Salman      |   9137666364 |     101 | BD
+  22768 | Salman khan |   9237666364 |     103 | BD
+  23768 | Mukesh      |   9137666364 |     104 | BD
+(36 rows)
+
+
+day15g=#
+day15g=# create view viewdata1 as select emp_id,emp_name,emp_phone_no,a.dept_id,b.dept_name from SelfTaazaa a,dept b where a.dept_id=b.dept_id;
+CREATE VIEW
+day15g=# select * from viewdata1;
+ emp_id |  emp_name   | emp_phone_no | dept_id | dept_name
+--------+-------------+--------------+---------+-----------
+  15768 | Gurpreet    |   9717983635 |     101 | Admin
+  16768 | rohan       |   7827656364 |     101 | Admin
+  17768 | Abhishek    |   7827666364 |     102 | Support
+  18768 | Raman       |   7227666364 |     103 | HR
+  19768 | max         |   9227666364 |     101 | Admin
+  20768 | ben         |   9237666364 |     102 | Support
+  21768 | Salman      |   9137666364 |     101 | Admin
+  22768 | Salman khan |   9237666364 |     103 | HR
+  23768 | Mukesh      |   9137666364 |     104 | BD
+(9 rows)
+
+
+day15g=# create view viewdata2 as select emp_id,emp_name,emp_phone_no,a.dept_id,b.dept_name from SelfTaazaa a,dept b where a inner join b;
+ERROR:  syntax error at or near "inner"
+LINE 1: ...t_id,b.dept_name from SelfTaazaa a,dept b where a inner join...
+                                                             ^
+day15g=# create view viewdata2 as select emp_id,emp_name,emp_phone_no,a.dept_id,b.dept_name from SelfTaazaa a,dept b where a innerjoin b;
+ERROR:  syntax error at or near "innerjoin"
+LINE 1: ...t_id,b.dept_name from SelfTaazaa a,dept b where a innerjoin ...
+                                                             ^
+day15g=# create view viewdata2 as select emp_id,emp_name,emp_phone_no,a.dept_id,b.dept_name from SelfTaazaa a,dept b where a innerjoin b;
+
+24-08-2021 work
+
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (13.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+#how to connect with db
+
+postgres=# create database Gurpreet_Singh
+postgres-# ;
+CREATE DATABASE
+postgres=# \l
+                                                   List of databases
+      Name      |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges   ----------------+----------+----------+----------------------------+----------------------------+----------------------- day9           | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ dbname         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ gurpreet       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ gurpreet_singh | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ mickey         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ postgres       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0      | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +                |          |          |                            |                            | postgres=CTc/postgres
+ template1      | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +                |          |          |                            |                            | postgres=CTc/postgres
+(8 rows)
+
+#howto connect with db
+
+postgres=# \c gurpreet_singh;
+You are now connected to database "gurpreet_singh" as user "postgres".
+
+# how to check for the table available in db
+
+gurpreet_singh=# \d
+Did not find any relations.
+how to create table with primary key, date & time dataype
+
+gurpreet_singh=# create table employee(
+gurpreet_singh(# emp_id int generated always as identity,
+gurpreet_singh(# primary key(emp_id),
+gurpreet_singh(# e_name varchar(20) not null,
+gurpreet_singh(# age char(1) not null,
+gurpreet_singh(# gender char(1) default 'M',
+gurpreet_singh(# jdate date default current_date,
+gurpreet_singh(# tdate time default current_time);
+CREATE TABLE
+gurpreet_singh=# \d
+                 List of relations
+ Schema |        Name         |   Type   |  Owner
+--------+---------------------+----------+----------
+ public | employee            | table    | postgres
+ public | employee_emp_id_seq | sequence | postgres
+(2 rows)
+
+how to create table with foreign key
+
+gurpreet_singh=# create table department(
+gurpreet_singh(# dept_id int generated always as identity,
+gurpreet_singh(# dept_name varchar(30) not null,
+gurpreet_singh(# primary key(dept_id),
+gurpreet_singh(# emp_id int not null,
+gurpreet_singh(# constraint fkdept foreign key(emp_id) references employee(emp_id));
+CREATE TABLE
+gurpreet_singh=# \d
+                   List of relations
+ Schema |          Name          |   Type   |  Owner
+--------+------------------------+----------+----------
+ public | department             | table    | postgres
+ public | department_dept_id_seq | sequence | postgres
+ public | employee               | table    | postgres
+ public | employee_emp_id_seq    | sequence | postgres
+(4 rows)
+
+# how to use alter command
+
+gurpreet_singh=# alter table employee alter column age type char(2);
+ALTER TABLE
+
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (13.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \c gurpreet_singh
+You are now connected to database "gurpreet_singh" as user "postgres".
+                             ^
+# how to insert values in table
+
+gurpreet_singh=# insert into employee(e_name,age) values('Gurpreet Singh','22');
+INSERT 0 1
+gurpreet_singh=# insert into employee(e_name,age) values('Harpreet Singh','23');
+INSERT 0 1
+gurpreet_singh=# insert into employee(e_name,age) values('Rahul ','23');
+INSERT 0 1
+gurpreet_singh=# insert into employee(e_name,age) values('Rohit ','23');
+INSERT 0 1
+gurpreet_singh=# insert into employee(e_name,age) values('Mohit ','23');
+INSERT 0 1
+gurpreet_singh=# insert into employee(e_name,age) values('Saurabh ','23');
+INSERT 0 1
+gurpreet_singh=# insert into employee(e_name,age,gender) values('Jyoti ','23','F');
+INSERT 0 1
+gurpreet_singh=# select * from employee
+gurpreet_singh-# ;
+ emp_id |     e_name     | age | gender |   jdate    |      tdate
+--------+----------------+-----+--------+------------+-----------------
+      1 | Gurpreet Singh | 22  | M      | 2021-08-27 | 09:14:29.424046
+      2 | Harpreet Singh | 23  | M      | 2021-08-27 | 09:14:48.579051
+      3 | Rahul          | 23  | M      | 2021-08-27 | 09:15:04.299688
+      4 | Rohit          | 23  | M      | 2021-08-27 | 09:15:13.90208
+      5 | Mohit          | 23  | M      | 2021-08-27 | 09:15:29.931416
+      6 | Saurabh        | 23  | M      | 2021-08-27 | 09:15:40.679304
+      7 | Jyoti          | 23  | F      | 2021-08-27 | 09:16:12.308645
+(7 rows)
+
+
+gurpreet_singh=# insert into department(dept_name,emp_id) values('cse',2);
+INSERT 0 1
+gurpreet_singh=# insert into department(dept_name,emp_id) values('it',1);
+INSERT 0 1
+gurpreet_singh=# insert into department(dept_name,emp_id) values('it',3);
+INSERT 0 1
+gurpreet_singh=# insert into department(dept_name,emp_id) values('cse',4);
+INSERT 0 1
+gurpreet_singh=# insert into department(dept_name,emp_id) values('ECE',5);
+INSERT 0 1
+gurpreet_singh=# insert into department(dept_name,emp_id) values('EEE',6);
+INSERT 0 1
+gurpreet_singh=# insert into department(dept_name,emp_id) values('ME',7);
+INSERT 0 1
+gurpreet_singh=# select * from department;
+ dept_id | dept_name | emp_id
+---------+-----------+--------
+       1 | cse       |      2
+       2 | it        |      1
+       3 | it        |      3
+       4 | cse       |      4
+       5 | ECE       |      5
+       6 | EEE       |      6
+       7 | ME        |      7
+(7 rows)
+
+
+gurpreet_singh=# select s.emp_id,e_name,dept_name from employee s,department d where s.emp_id=d.emp_id;
+ emp_id |     e_name     | dept_name
+--------+----------------+-----------
+      2 | Harpreet Singh | cse
+      1 | Gurpreet Singh | it
+      3 | Rahul          | it
+      4 | Rohit          | cse
+      5 | Mohit          | ECE
+      6 | Saurabh        | EEE
+      7 | Jyoti          | ME
+(7 rows)
+
+
+gurpreet_singh=#
+
+#   how to drop table in sql
+
+gurpreet_singh=# create table dublicate as select * from department;
+SELECT 7
+gurpreet_singh=# select * from dublicate;
+ dept_id | dept_name | emp_id
+---------+-----------+--------
+       1 | cse       |      2
+       2 | it        |      1
+       3 | it        |      3
+       4 | cse       |      4
+       5 | ECE       |      5
+       6 | EEE       |      6
+       7 | ME        |      7
+(7 rows)
+
+
+gurpreet_singh=# drop table dublicate;
+DROP TABLE
+gurpreet_singh=# \d
+                   List of relations
+ Schema |          Name          |   Type   |  Owner
+--------+------------------------+----------+----------
+ public | department             | table    | postgres
+ public | department_dept_id_seq | sequence | postgres
+ public | employee               | table    | postgres
+ public | employee_emp_id_seq    | sequence | postgres
+(4 rows)
+
+
+25-08-2021(wed) #day 10
+
+postgres=# \c day9
+You are now connected to database "day9" as user "postgres".
+day9=# create table taazaatraining(
+day9(# id int generated always as identity,
+day9(# name varchar(50),
+day9(# address varchar(50),
+day9(# age int);
+CREATE TABLE
+
+after lunch
+DATE,array,smallint,time,char,numeric DATATYPE
+
+
+before lunch
+
+1) update
+
+
+day9=# update taazaatraining set name='das sukhdev' where id=1;
+UPDATE 1
+day9=# select * from taazaatraining;
+ id |    name     |  address  | age
+----+-------------+-----------+-----
+  2 | sukhdev     | new delhi |  22
+  3 | Rahul       | Noida     |  23
+  1 | das sukhdev | new delhi |  22
+(3 rows)
+
+
+day9=# update taazaatraining set name='das sukhdev' where id=2;
+UPDATE 1
+day9=# update taazaatraining set name='Gurpreet singh' where id=1;
+UPDATE 1
+day9=# select * from taazaatraining;
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  2 | das sukhdev    | new delhi |  22
+  1 | Gurpreet singh | new delhi |  22
+(3 rows)
+
+
+2) delete
+3) where
+
+day9=# delete from taazaatraining where id=2;
+DELETE 1
+day9=# delete from taazaatraining where id=1;
+DELETE 1
+day9=# insert into taazaatraining(name,address,age) values('Gurpreet Singh','new delhi',22);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('sukhdev','new delhi',22);
+INSERT 0 1
+day9=# delete from taazaatraining where id=2;
+DELETE 0
+day9=# select * from taazaatraining;
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+(3 rows)
+
+
+
+4) order by
+
+day9=# select * from taazaatraining order by id;
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+(3 rows)
+
+
+day9=# select * from taazaatraining order by address;
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+  3 | Rahul          | Noida     |  23
+(3 rows)
+
+
+5) * group by
+GROUP BY clause in PostgreSQL. We also see examples of how GROUP BY clause working with SUM() function, COUNT(), JOIN clause, multiple columns, and the without an aggregate function.
+
+every group can apply an aggregate function like COUNT() function is used to get the number of items in the groups, and the SUM() function is used to analyze the sum of items.
+
+
+6) * having
+
+The having clause is used to specify a search condition for a group or an aggregate. And it is regularly used with the GROUP BY clause to filter groups or aggregates based on a detailed condition.
+
+
+7) distinct
+
+the DISTINCT clause will analyze the matching rows or data according to the grouping of these column's values.
+
+day9=# select address from taazaatraining group by address;
+  address
+-----------
+ new delhi
+ Noida
+(2 rows)
+
+
+
+day9=# select count(address) from taazaatraining group by address having address='new delhi';
+ count
+-------
+     2
+(1 row)
+
+
+day9=# select distinct(address) from taazaatraining ;
+  address
+-----------
+ new delhi
+ Noida
+(2 rows)
+
+
+8) limit
+
+LIMIT clause, which is used to get a subset of rows produced by a command.
+In the above syntax, Limit clause returns row_count rows created by the command.
+
+If a limit count is given, no more than that many rows will be returned (but possibly less, if the query itself yields less rows). LIMIT ALL is the same as omitting the LIMIT clause.
+
+OFFSET says to skip that many rows before beginning to return rows. OFFSET 0 is the same as omitting the OFFSET clause, and LIMIT NULL is the same as omitting the LIMIT clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.
+
+When using LIMIT, it is important to use an ORDER BY clause that constrains the result rows into a unique order. Otherwise you will get an unpredictable subset of the query's rows. You might be asking for the tenth through twentieth rows, but tenth through twentieth in what ordering? The ordering is unknown, unless you specified ORDER BY.
+
+The query optimizer takes LIMIT into account when generating query plans, so you are very likely to get different plans (yielding different row orders) depending on what you give for LIMIT and OFFSET. Thus, using different LIMIT/OFFSET values to select different subsets of a query result will give inconsistent results unless you enforce a predictable result ordering with ORDER BY.
+
+If row_count value is NULL then the query will produce a similar outcome because it does not contain the LIMIT clause.
+Or if row_count is zero, the statement will return an empty set.
+
+We can use the OFFSET clause if we want to miss out various of rows before getting the row_count rows.
+And the offset clause comes after the LIMIT clause as we can see in the below command:
+
+day9=# select name from taazaatraining order by name limit 6;
+      name
+----------------
+ Gurpreet Singh
+ Rahul
+ sukhdev
+(3 rows)
+
+
+day9=# select name from taazaatraining order by name limit 1;
+      name
+----------------
+ Gurpreet Singh
+(1 row)
+
+
+day9=# select name from taazaatraining order by name limit 2;
+      name
+----------------
+ Gurpreet Singh
+ Rahul
+(2 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3;
+      name
+----------------
+ Gurpreet Singh
+ Rahul
+ sukhdev
+(3 rows)
+
+
+day9=# select name from taazaatraining order by name limit 0;
+ name
+------
+(0 rows)
+
+
+day9=# insert into taazaatraining(name,address,age) values('abhishek','Noida',23);
+INSERT 0 1
+day9=# select name from taazaatraining order by name limit 2;
+      name
+----------------
+ abhishek
+ Gurpreet Singh
+(2 rows)
+
+8.1)  offset with limit
+
+day9=# insert into taazaatraining(name,address,age) values('mohit','Noida',23);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('rohan','Noida',23);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('ram','Noida',23);
+INSERT 0 1
+day9=# select name from taazaatraining order by name limit 2 offset 0;
+      name
+----------------
+ abhishek
+ Gurpreet Singh
+(2 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 1;
+      name
+----------------
+ Gurpreet Singh
+ mohit
+ Rahul
+(3 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 2;
+ name
+-------
+ mohit
+ Rahul
+ ram
+(3 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 3;
+ name
+-------
+ Rahul
+ ram
+ rohan
+(3 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 4;
+  name
+---------
+ ram
+ rohan
+ sukhdev
+(3 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 5;
+  name
+---------
+ rohan
+ sukhdev
+(2 rows)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 6;
+  name
+---------
+ sukhdev
+(1 row)
+
+
+day9=# select name from taazaatraining order by name limit 3 offset 7;
+ name
+------
+(0 rows)
+
+
+9) fetch
+
+ the FETCH clause, which is used to recover various rows returned by a command. 
+The general syntax of the PostgreSQL FETCH clause is as follows:
+
+OFFSET start { ROW | ROWS }  
+FETCH { FIRST | NEXT } [ row_count ] { ROW | ROWS } ONLY  
+In the above syntax, we have the following parameters:
+
+Parameter	Description
+Start	        It is an integer whose essential value is Positive or Zero; otherwise takes its default value, which is zero.
+ROW | ROWS	Here, the Row is the replacement for ROWS, which means the ROW is the alternative for other ROWS; that's why we can use them equivalently.
+Row_count	If we do not define the row_count clearly, it will take its default value, which is one.
+Note:
+
+If the OFFSET clause is not defined, then the start is larger than the number of rows in the outcome, and no rows are returned as the order of rows kept in that table is unnamed.
+If we want to make our software compatible with other database systems, we should use the FETCH clause as it follows the standard SQL, and the FETCH clause is functionally comparable to the LIMIT clause.
+
+day9=# select name from taazaatraining order by name fetch first 2 rows only;
+      name
+----------------
+ abhishek
+ Gurpreet Singh
+(2 rows)
+
+
+day9=# select name from taazaatraining order by name fetch first 6 rows only;
+      name
+----------------
+ abhishek
+ Gurpreet Singh
+ mohit
+ Rahul
+ ram
+ rohan
+(6 rows)
+
+
+day9=# select name from taazaatraining order by name fetch first 7 rows only;
+      name
+----------------
+ abhishek
+ Gurpreet Singh
+ mohit
+ Rahul
+ ram
+ rohan
+ sukhdev
+(7 rows)
+
+
+day9=# select name from taazaatraining order by name fetch first 8 rows only;
+      name
+----------------
+ abhishek
+ Gurpreet Singh
+ mohit
+ Rahul
+ ram
+ rohan
+ sukhdev
+(7 rows)
+
+
+day9=# select name from taazaatraining order by name fetch first  rows only;
+   name
+----------
+ abhishek
+(1 row)
+
+
+day9=# select name from taazaatraining order by name fetch   rows only;
+ERROR:  syntax error at or near "rows"
+LINE 1: ...ct name from taazaatraining order by name fetch   rows only;
+                                                             ^
+day9=# select name from taazaatraining order by name fetch  1 rows only;
+ERROR:  syntax error at or near "1"
+LINE 1: ...ect name from taazaatraining order by name fetch  1 rows onl...
+                                                             ^
+day9=# select name from taazaatraining order by name fetch second 1 rows only;
+ERROR:  syntax error at or near "second"
+LINE 1: ...lect name from taazaatraining order by name fetch second 1 r...
+                                                             ^
+day9=# select name from taazaatraining order by name fetch first 1 rows only;
+   name
+----------
+ abhishek
+(1 row)
+
+
+
+
+
+
+10) * in
+
+The PostgreSQL IN condition is used within the WHERE clause to get those data that matches any data in a list. In other words, we can say that the IN condition is used to reduce multiple OR conditions.
+
+
+day9=# insert into taazaatraining(name,address,age) values('rohan','Gurugram',23);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('rohan','up',23);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('rohani','tamil nadu',23);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('rohani','tamil nadu',20);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('rohani','tamil nadu',18);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('akash','new delhi',16);
+INSERT 0 1
+day9=# insert into taazaatraining(name,address,age) values('akash jassal','punjab',14);
+INSERT 0 1
+day9=# select * from taazaatraining;
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 13 | rohani         | tamil nadu |  20
+ 14 | rohani         | tamil nadu |  18
+ 15 | akash          | new delhi  |  16
+ 16 | akash jassal   | punjab     |  14
+(14 rows)
+
+
+day9=# select * from taazaatraining where address in ['delhi','noida'];
+ERROR:  syntax error at or near "["
+LINE 1: select * from taazaatraining where address in ['delhi','noid...
+                                                      ^
+day9=# select * from taazaatraining where address in ('delhi','noida');
+ id | name | address | age
+----+------+---------+-----
+(0 rows)
+
+
+day9=# select * from taazaatraining where address in ('delhi','Noida');
+ id |   name   | address | age
+----+----------+---------+-----
+  3 | Rahul    | Noida   |  23
+  6 | abhishek | Noida   |  23
+  7 | mohit    | Noida   |  23
+  8 | rohan    | Noida   |  23
+  9 | ram      | Noida   |  23
+(5 rows)
+
+
+day9=# select * from taazaatraining where address in ('new delhi','Noida');
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+  6 | abhishek       | Noida     |  23
+  7 | mohit          | Noida     |  23
+  8 | rohan          | Noida     |  23
+  9 | ram            | Noida     |  23
+ 15 | akash          | new delhi |  16
+(8 rows)
+
+
+day9=# select * from taazaatraining where address in ('new delhi','Noida','up');
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+  6 | abhishek       | Noida     |  23
+  7 | mohit          | Noida     |  23
+  8 | rohan          | Noida     |  23
+  9 | ram            | Noida     |  23
+ 11 | rohan          | up        |  23
+ 15 | akash          | new delhi |  16
+(9 rows)
+
+
+day9=# select * from taazaatraining where address in ('new delhi','Noida','up','gurugram');
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+  6 | abhishek       | Noida     |  23
+  7 | mohit          | Noida     |  23
+  8 | rohan          | Noida     |  23
+  9 | ram            | Noida     |  23
+ 11 | rohan          | up        |  23
+ 15 | akash          | new delhi |  16
+(9 rows)
+
+
+day9=# select * from taazaatraining where address not in ('new delhi','Noida','up','gurugram');
+ id |     name     |  address   | age
+----+--------------+------------+-----
+ 10 | rohan        | Gurugram   |  23
+ 12 | rohani       | tamil nadu |  23
+ 13 | rohani       | tamil nadu |  20
+ 14 | rohani       | tamil nadu |  18
+ 16 | akash jassal | punjab     |  14
+(5 rows)
+
+
+day9=# select * from taazaatraining where address  in ('new delhi','Noida','up','Gurugram');
+ id |      name      |  address  | age
+----+----------------+-----------+-----
+  3 | Rahul          | Noida     |  23
+  4 | Gurpreet Singh | new delhi |  22
+  5 | sukhdev        | new delhi |  22
+  6 | abhishek       | Noida     |  23
+  7 | mohit          | Noida     |  23
+  8 | rohan          | Noida     |  23
+  9 | ram            | Noida     |  23
+ 10 | rohan          | Gurugram  |  23
+ 11 | rohan          | up        |  23
+ 15 | akash          | new delhi |  16
+(10 rows)
+
+
+11) * like
+
+
+the working of PostgreSQL Like condition which is used to fetch data using pattern matchings, examples of the like condition by using percent (%), underscore (_) wildcards, Not Like Operator, working of ILIKE operator, and the extension of PostgreSQL Like Operator.
+
+Introduction of PostgreSQL Like condition
+The PostgreSQL Like condition is used to fetch data from a table where the defined condition satisfies the LIKE condition. The result contains strings, which are case-sensitive and follow the specified pattern.
+
+In other words, we can also say that the Like condition is used to perform pattern matching for identifying the exact outcome.
+
+To serve the purpose of patterns matching, the PostgreSQL provides two different wildcard characters, which are as follows:
+
+
+Percent (%) wildcard: To match any sequence of zero or more characters.
+Underscore (_) wildcard: To match any single character.
+
+day9=# select * from taazaatraining;
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 13 | rohani         | tamil nadu |  20
+ 14 | rohani         | tamil nadu |  18
+ 15 | akash          | new delhi  |  16
+ 16 | akash jassal   | punjab     |  14
+(14 rows)
+
+
+day9=# select * from taazaatraining where name=a%;
+ERROR:  syntax error at or near ";"
+LINE 1: select * from taazaatraining where name=a%;
+                                                  ^
+day9=# select * from taazaatraining where name='a%';
+ id | name | address | age
+----+------+---------+-----
+(0 rows)
+
+
+day9=# select * from taazaatraining where name='R%';
+ id | name | address | age
+----+------+---------+-----
+(0 rows)
+
+
+day9=# select * from taazaatraining (order by name)  and (name like 'a%');
+ERROR:  syntax error at or near "order"
+LINE 1: select * from taazaatraining (order by name)  and (name like...
+                                      ^
+day9=# select * from taazaatraining (name like 'a%');
+ERROR:  column "name" does not exist
+LINE 1: select * from taazaatraining (name like 'a%');
+                                      ^
+day9=# select * from taazaatraining where name like 'a%';
+ id |     name     |  address  | age
+----+--------------+-----------+-----
+  6 | abhishek     | Noida     |  23
+ 15 | akash        | new delhi |  16
+ 16 | akash jassal | punjab    |  14
+(3 rows)
+
+12) AND OR NOT
+
+the AND condition can combine with the SELECT, INSERT, UPDATE, and DELETE commands. In other words, we can say that the AND condition is used to specify the data if all the conditions separated by AND are TRUE.
+
+In PostgreSQL, the OR condition can be combined with the SELECT, INSERT, UPDATE, and DELETE commands to select unique data from various columns in a table. In other words, we can say that the OR condition is used to return the data if any of the conditions divided by OR is TRUE.
+
+The PostgreSQL NOT condition is used with the WHERE clause to negate a condition in a command. The NOT Condition is also knowns as NOT Operator.
+
+ay9=# select * from taazaatraining;
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 13 | rohani         | tamil nadu |  20
+ 14 | rohani         | tamil nadu |  18
+ 15 | akash          | new delhi  |  16
+ 16 | akash jassal   | punjab     |  14
+(14 rows)
+
+
+day9=# select * from taazaatraining where age>10 and age<20;
+ id |     name     |  address   | age
+----+--------------+------------+-----
+ 14 | rohani       | tamil nadu |  18
+ 15 | akash        | new delhi  |  16
+ 16 | akash jassal | punjab     |  14
+(3 rows)
+
+
+day9=# select * from taazaatraining where age>20 or age<20;
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 14 | rohani         | tamil nadu |  18
+ 15 | akash          | new delhi  |  16
+ 16 | akash jassal   | punjab     |  14
+(13 rows)
+
+
+day9=# select * from taazaatraining where age>20 or age=20;
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 13 | rohani         | tamil nadu |  20
+(11 rows)
+
+
+day9=# select * from taazaatraining where name not like '%h';
+ id |     name     |  address   | age
+----+--------------+------------+-----
+  3 | Rahul        | Noida      |  23
+  5 | sukhdev      | new delhi  |  22
+  6 | abhishek     | Noida      |  23
+  7 | mohit        | Noida      |  23
+  8 | rohan        | Noida      |  23
+  9 | ram          | Noida      |  23
+ 10 | rohan        | Gurugram   |  23
+ 11 | rohan        | up         |  23
+ 12 | rohani       | tamil nadu |  23
+ 13 | rohani       | tamil nadu |  20
+ 14 | rohani       | tamil nadu |  18
+ 16 | akash jassal | punjab     |  14
+(12 rows)
+
+
+day9=#
+
+
+13) BETWEEN
+
+The PostgreSQL Between condition is used to define how to retrieve values from an expression within a specific range. In other words, we can say that the Between condition is used to match a value against a range of values.
+
+day9=# select * from taazaatraining ;
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 13 | rohani         | tamil nadu |  20
+ 14 | rohani         | tamil nadu |  18
+ 15 | akash          | new delhi  |  16
+ 16 | akash jassal   | punjab     |  14
+(14 rows)
+
+
+day9=# select * from taazaatraining where age between 10 and 20;
+ id |     name     |  address   | age
+----+--------------+------------+-----
+ 13 | rohani       | tamil nadu |  20
+ 14 | rohani       | tamil nadu |  18
+ 15 | akash        | new delhi  |  16
+ 16 | akash jassal | punjab     |  14
+(4 rows)
+
+
+day9=#
+
+14) EXIST
+
+In this section, we are going to understand the working of PostgreSQL EXISTS Condition, which is used with the WHERE clause to evaluate the existing rows in a subquery. And we also see examples of EXISTS Condition with different queries such as INSERT, SELECT, NOT EXISTS, NULL, UPDATE, and DELETE.
+day9=# select * from taazaatraining where exists (select * from taazaatraining where name like 'r%');
+ id |      name      |  address   | age
+----+----------------+------------+-----
+  3 | Rahul          | Noida      |  23
+  4 | Gurpreet Singh | new delhi  |  22
+  5 | sukhdev        | new delhi  |  22
+  6 | abhishek       | Noida      |  23
+  7 | mohit          | Noida      |  23
+  8 | rohan          | Noida      |  23
+  9 | ram            | Noida      |  23
+ 10 | rohan          | Gurugram   |  23
+ 11 | rohan          | up         |  23
+ 12 | rohani         | tamil nadu |  23
+ 13 | rohani         | tamil nadu |  20
+ 14 | rohani         | tamil nadu |  18
+ 15 | akash          | new delhi  |  16
+ 16 | akash jassal   | punjab     |  14
+(14 rows)
+
+
+
+DATE DATATYPE
+
+In PostgreSQL, the Date data type format is YYYY-MM-DD, which helps us to store and insert the date records into the date column.
+
+The Date data type involve 4 bytes of storage size. And the minimum and maximum ranges of date data type start with 4713 BC to 5874897 AD or 1000-01-01 to 9999-12-31.
+
+We can use the CURRENT_DATE after the DEFAULT keyword if we want to use the current date as the column's default value while creating a new table containing a Date column.
+
+smallint DATATYPE
+
+time DATATYPE
+
+
+
+day9=# create table student(
+day9(# rollno int generated always as identity,
+day9(# name varchar(20) not null,
+day9(# phno bigint not null,
+day9(# age smallint not null,
+day9(# fees decimal not null,
+day9(# primary key(rollno),
+day9(# gender varchar(1) default 'M',
+day9(# date_of_admission date not null default current_date,
+day9(# dob date not null);
+CREATE TABLE
+day9=# alter table taazaatraining add time_of_admission time default current_time;
+ALTER TABLE
+day9=# alter table student add time_of_admission time default current_time;
+ALTER TABLE
+day9=# insert into student(name,phno,age,fees,gender,dob) values('Mickey',9717983635,22,100.25,'M',1949-09-12);
+ERROR:  column "dob" is of type date but expression is of type integer
+LINE 1: ...der,dob) values('Mickey',9717983635,22,100.25,'M',1949-09-12...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+day9=# insert into student(name,phno,age,fees,gender,dob) values('Mickey',9717983635,22,100.25,'M','1949-09-12');
+INSERT 0 1
+day9=# select * from student;
+ rollno |  name  |    phno    | age |  fees  | gender | date_of_admission |    dob     | time_of_admission
+--------+--------+------------+-----+--------+--------+-------------------+------------+-------------------
+      1 | Mickey | 9717983635 |  22 | 100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703
+(1 row)
+
+
+day9=# insert into student(name,phno,age,fees,dob) values('donal',9733983635,32,200.25,'1939-09-12');
+INSERT 0 1
+day9=# select * from student;
+ rollno |  name  |    phno    | age |  fees  | gender | date_of_admission |    dob     | time_of_admission
+--------+--------+------------+-----+--------+--------+-------------------+------------+-------------------
+      1 | Mickey | 9717983635 |  22 | 100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703
+      2 | donal  | 9733983635 |  32 | 200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492
+(2 rows)
+
+
+day9=# insert into student(name,phno,age,fees,gender,dob) values('emma',9227983635,22,100.25,'F','1949-12-12');
+INSERT 0 1
+day9=# select * from student;
+ rollno |  name  |    phno    | age |  fees  | gender | date_of_admission |    dob     | time_of_admission
+--------+--------+------------+-----+--------+--------+-------------------+------------+-------------------
+      1 | Mickey | 9717983635 |  22 | 100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703
+      2 | donal  | 9733983635 |  32 | 200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492
+      3 | emma   | 9227983635 |  22 | 100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854
+(3 rows)
+
+
+day9=#
+
+char DATATYPE
+
+numeric DATATYPE
+
+day9=# alter table student alter gender type char(1);
+ALTER TABLE
+day9=# alter table student alter fees type numberic;
+
+day9=# alter table student alter fees type numeric;
+ALTER TABLE
+day9=# insert into student(name,phno,age,fees,gender,dob) values('emma',9227983635,22,10050000000000000000.89,'F','1949-12-12');
+INSERT 0 1
+day9=# insert into student(name,phno,age,fees,gender,dob) values('emma',9227983635,22,10050000000000000000.89,'F','1949-12-12');
+
+26-08-2021 work
+
+Why we use joins?
+Whenever we want to get records from two or more tables, we will execute the joins commands.
+
+
+
+Types of Joins
+•         Inner Join
+The PostgreSQL Inner Join is used to return only those records from the tables, which are equivalent to the defined condition and hides other rows and columns. In PostgreSQL, it as a default Join, therefore it is not compulsory to use the Inner Join keyword with the query.
+
+
+day9=# select * from student;
+ rollno |  name  |    phno    | age |          fees           | gender | date_of_admission |    dob     | time_of_admission |      faxno
+--------+--------+------------+-----+-------------------------+--------+-------------------+------------+-------------------+-----------------
+      1 | Mickey | 9717983635 |  22 |                  100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703   |
+      2 | donal  | 9733983635 |  32 |                  200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492   |
+      3 | emma   | 9227983635 |  22 |                  100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854   |
+      4 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:21:07.439436   |
+      5 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:23:57.308004   |
+      6 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:56:11.614468   | {9826373,74348}
+(6 rows)
+
+
+day9=# select * from department;
+ dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select * from student inner join department on student.rollno=department.rollno;
+ rollno |  name  |    phno    | age |          fees           | gender | date_of_admission |    dob     | time_of_admission |      faxno      | dptid | dptname | rollno |    doj     |       toj
+--------+--------+------------+-----+-------------------------+--------+-------------------+------------+-------------------+-----------------+-------+---------+--------+------------+-----------------
+      1 | Mickey | 9717983635 |  22 |                  100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703   |                 |     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+      2 | donal  | 9733983635 |  32 |                  200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492   |                 |     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+      3 | emma   | 9227983635 |  22 |                  100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854   |                 |     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+      4 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:21:07.439436   |                 |     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+      5 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:23:57.308004   |                 |     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+      6 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:56:11.614468   | {9826373,74348} |     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+(6 rows)
+
+
+day9=# select student.rollno,name,dptname from student inner join department on student.rollno=department.rollno;
+ rollno |  name  | dptname
+--------+--------+---------
+      1 | Mickey | CSE
+      2 | donal  | IT
+      3 | emma   | ECE
+      4 | emma   | AI
+      5 | emma   | DS
+      6 | emma   | EEE
+(6 rows)
+
+
+
+•         Outer Join
+left outer join
+
+
+The PostgreSQL LEFT JOIN or Left Outer Join is used to return all rows from the left table and rows from the other table where the join condition is fulfilled defined in the ON condition. And if there are no corresponding records found from the right table, it will return null.
+
+The Left Join can also be known as the Left Outer Join clause. Therefore, the Outer is the optional keyword, which is used in Left Join. In PostgreSQL, the Left join is parallel to the Inner Join condition.
+
+day9=# select * from student;
+ rollno |  name  |    phno    | age |          fees           | gender | date_of_admission |    dob     | time_of_admission |      faxno
+--------+--------+------------+-----+-------------------------+--------+-------------------+------------+-------------------+-----------------
+      1 | Mickey | 9717983635 |  22 |                  100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703   |
+      2 | donal  | 9733983635 |  32 |                  200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492   |
+      3 | emma   | 9227983635 |  22 |                  100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854   |
+      4 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:21:07.439436   |
+      5 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:23:57.308004   |
+      6 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:56:11.614468   | {9826373,74348}
+(6 rows)
+
+
+day9=# select * from department;
+ dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select student.rollno,name,dptname from student left join department on student.rollno=department.rollno;
+ rollno |  name  | dptname
+--------+--------+---------
+      1 | Mickey | CSE
+      2 | donal  | IT
+      3 | emma   | ECE
+      4 | emma   | AI
+      5 | emma   | DS
+      6 | emma   | EEE
+(6 rows)
+
+right outer join:-
+The PostgreSQL Right JOIN or Right Outer Join is used to return all rows from the right table, and rows from the other table where the join condition is fulfilled defined in the ON condition. And if there are no corresponding records found from the Left table, it will return null values.
+
+The Right Join can also be called as the Right Outer Join clause. Therefore, the Outer is the optional keyword, which is used in Right Join. In PostgreSQL, the Right join is parallel to the Left Join condition, but it will give the opposite result of the join tables.
+
+
+day9=# select * from student;
+ rollno |  name  |    phno    | age |          fees           | gender | date_of_admission |    dob     | time_of_admission |      faxno
+--------+--------+------------+-----+-------------------------+--------+-------------------+------------+-------------------+-----------------
+      1 | Mickey | 9717983635 |  22 |                  100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703   |
+      2 | donal  | 9733983635 |  32 |                  200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492   |
+      3 | emma   | 9227983635 |  22 |                  100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854   |
+      4 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:21:07.439436   |
+      5 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:23:57.308004   |
+      6 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:56:11.614468   | {9826373,74348}
+(6 rows)
+
+
+day9=# select * from department;
+ dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select student.rollno,name,dptname from student right join department on student.rollno=department.rollno;
+ rollno |  name  | dptname
+--------+--------+---------
+      1 | Mickey | CSE
+      2 | donal  | IT
+      3 | emma   | ECE
+      4 | emma   | AI
+      5 | emma   | DS
+      6 | emma   | EEE
+        |        | ME
+(7 rows)
+
+full outer join :-
+The PostgreSQL Full Join or Full Outer Join is used to return all records when there is a match in the left table or right table records. The main objective of a Full Outer Join is that it will combine the outcome of PostgreSQL Left Join and PostgreSQL Right Join clauses and returns all similar or unmatched rows from the tables on both sides of the join clause.
+
+
+day9=# select * from student;
+ rollno |  name  |    phno    | age |          fees           | gender | date_of_admission |    dob     | time_of_admission |      faxno
+--------+--------+------------+-----+-------------------------+--------+-------------------+------------+-------------------+-----------------
+      1 | Mickey | 9717983635 |  22 |                  100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703   |
+      2 | donal  | 9733983635 |  32 |                  200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492   |
+      3 | emma   | 9227983635 |  22 |                  100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854   |
+      4 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:21:07.439436   |
+      5 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:23:57.308004   |
+      6 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:56:11.614468   | {9826373,74348}
+(6 rows)
+
+
+day9=# select * from department;
+ dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select student.rollno,name,dptname from student full join department on student.rollno=department.rollno;
+ rollno |  name  | dptname
+--------+--------+---------
+      1 | Mickey | CSE
+      2 | donal  | IT
+      3 | emma   | ECE
+      4 | emma   | AI
+      5 | emma   | DS
+      6 | emma   | EEE
+        |        | ME
+(7 rows)
+
+
+day9=# select student.rollno,name,dptname from student full outer join department on student.rollno=department.rollno;
+ rollno |  name  | dptname
+--------+--------+---------
+      1 | Mickey | CSE
+      2 | donal  | IT
+      3 | emma   | ECE
+      4 | emma   | AI
+      5 | emma   | DS
+      6 | emma   | EEE
+        |        | ME
+(7 rows)
+
+
+    
+  •   Cross Join
+
+The PostgreSQL Cross Join is used to combine all possibilities of the multiple tables and returns the output, which contain each row from all the selected tables. The CROSS JOIN, further known as CARTESIAN JOIN that allows us to produce the Cartesian product of all related tables.
+
+The Cartesian product can be described as all existing rows in the first table multiplied by all rows in the second table. It is parallel to the Inner Join, where the join condition is not existing with this clause.
+day9=# select * from student;
+ rollno |  name  |    phno    | age |          fees           | gender | date_of_admission |    dob     | time_of_admission |      faxno
+--------+--------+------------+-----+-------------------------+--------+-------------------+------------+-------------------+-----------------
+      1 | Mickey | 9717983635 |  22 |                  100.25 | M      | 2021-08-25        | 1949-09-12 | 16:57:28.041703   |
+      2 | donal  | 9733983635 |  32 |                  200.25 | M      | 2021-08-25        | 1939-09-12 | 16:59:25.139492   |
+      3 | emma   | 9227983635 |  22 |                  100.25 | F      | 2021-08-25        | 1949-12-12 | 17:00:06.541854   |
+      4 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:21:07.439436   |
+      5 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:23:57.308004   |
+      6 | emma   | 9227983635 |  22 | 10050000000000000000.89 | F      | 2021-08-25        | 1949-12-12 | 17:56:11.614468   | {9826373,74348}
+(6 rows)
+
+
+day9=# select * from department;
+ dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select student.rollno,name,dptname from student cross join department on student.rollno=department.rollno;
+ERROR:  syntax error at or near "on"
+LINE 1: ...o,name,dptname from student cross join department on student...
+                                                             ^
+day9=# select student.rollno,name,dptname from student cross join department ;
+ rollno |  name  | dptname
+--------+--------+---------
+      1 | Mickey | CSE
+      2 | donal  | CSE
+      3 | emma   | CSE
+      4 | emma   | CSE
+      5 | emma   | CSE
+      6 | emma   | CSE
+      1 | Mickey | IT
+      2 | donal  | IT
+      3 | emma   | IT
+      4 | emma   | IT
+      5 | emma   | IT
+      6 | emma   | IT
+      1 | Mickey | ECE
+      2 | donal  | ECE
+      3 | emma   | ECE
+      4 | emma   | ECE
+      5 | emma   | ECE
+      6 | emma   | ECE
+      1 | Mickey | AI
+      2 | donal  | AI
+      3 | emma   | AI
+      4 | emma   | AI
+      5 | emma   | AI
+      6 | emma   | AI
+      1 | Mickey | DS
+      2 | donal  | DS
+      3 | emma   | DS
+      4 | emma   | DS
+      5 | emma   | DS
+      6 | emma   | DS
+      1 | Mickey | EEE
+      2 | donal  | EEE
+      3 | emma   | EEE
+      4 | emma   | EEE
+      5 | emma   | EEE
+      6 | emma   | EEE
+      1 | Mickey | ME
+      2 | donal  | ME
+      3 | emma   | ME
+      4 | emma   | ME
+      5 | emma   | ME
+      6 | emma   | ME
+(42 rows)
+ 6*7=42 rows
+
+
+
+•         Self-Join
+In PostgreSQL, we have one particular type of join, which is known as Self Join. The "PostgreSQL Self Join is used to set the different names of a similar table completely, and we can use the aliases also.
+
+To proceed a self-join, we will define a similar table two times with different table aliases and give the Join predicate after the ON keyword.
+
+In real-time, we use a self-join to compare rows within the same table (because the comparison of similar table name is not allowed in PostgreSQL), and to fetch the hierarchical data.
+
+day9=# select * from department c inner join department o on c.dptid=o.dptid;
+ dptid | dptname | rollno |    doj     |       toj       | dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238 |     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582  |     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661 |     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417 |     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976 |     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247 |     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548 |     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select * from department;
+ dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select * from department c inner join department o on c.dptid=o.dptid;
+ dptid | dptname | rollno |    doj     |       toj       | dptid | dptname | rollno |    doj     |       toj
+-------+---------+--------+------------+-----------------+-------+---------+--------+------------+-----------------
+     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238 |     1 | CSE     |      1 | 2021-08-26 | 15:19:14.604238
+     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582  |     2 | IT      |      2 | 2021-08-26 | 15:19:24.54582
+     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661 |     3 | ECE     |      3 | 2021-08-26 | 15:19:35.171661
+     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417 |     4 | AI      |      4 | 2021-08-26 | 15:19:43.955417
+     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976 |     5 | DS      |      5 | 2021-08-26 | 15:19:52.605976
+     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247 |     6 | EEE     |      6 | 2021-08-26 | 15:20:03.292247
+     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548 |     7 | ME      |      7 | 2021-08-26 | 15:20:17.471548
+(7 rows)
+
+
+day9=# select dptid,dptname,rollno from department c inner join department o on c.dptid=o.dptid;
+ERROR:  column reference "dptid" is ambiguous
+LINE 1: select dptid,dptname,rollno from department c inner join dep...
+               ^
+day9=# select c.dptid,o.dptname,c.rollno from department c inner join department o on c.dptid=o.dptid;
+ dptid | dptname | rollno
+-------+---------+--------
+     1 | CSE     |      1
+     2 | IT      |      2
+     3 | ECE     |      3
+     4 | AI      |      4
+     5 | DS      |      5
+     6 | EEE     |      6
+     7 | ME      |      7
+(7 rows)
+
+Natural join works same as inner join
+
+•         Union
+
+The PostgreSQL UNION clause/operator is used to combine the results of two or more SELECT statements without returning any duplicate rows.
+
+To use UNION, each SELECT must have the same number of columns selected, the same number of column expressions, the same data type, and have them in the same order but they do not have to be the same length.
+
+Syntax
+The basic syntax of UNION is as follows −
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+UNION
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+•         Intersect
+
+•         Understanding Views
+•         Need of Views
+•         Creating, Altering and Dropping Views
+•         Simple and Complex Views
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
