@@ -1,0 +1,200 @@
+indexes are special lookup tables that the database search engine can use to speed up data retrieval. Simply put, an index is a pointer to data in a table. An index in a database is very similar to an index in the back of a book.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An index helps to speed up SELECT queries and WHERE clauses; however, it slows down data input, with UPDATE and INSERT statements.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Indexes can be created or dropped with no effect on the data.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Creating an index involves the CREATE INDEX statement, which allows you to name the index, to specify the table and which column or columns to index, and to indicate whether the index is in ascending or descending order.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The CREATE INDEX Command
+The basic syntax of CREATE INDEX is as follows −
+
+CREATE INDEX index_name ON table_name;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Index Types
+---------------------
+Single-Column Indexes-
+=======================
+A single-column index is one that is created based on only one table column. The basic syntax is as follows −
+
+CREATE INDEX index_name
+ON table_name (column_name);
+
+Multicolumn Indexes
+====================
+A multicolumn index is defined on more than one column of a table. The basic syntax is as follows −
+
+CREATE INDEX index_name
+ON table_name (column1_name, column2_name);
+
+Unique Indexes
+===============
+Unique indexes are used not only for performance, but also for data integrity. A unique index does not allow any duplicate values to be inserted into the table. The basic syntax is as follows −
+
+CREATE UNIQUE INDEX index_name
+on table_name (column_name);
+
+Partial Indexes
+================
+A partial index is an index built over a subset of a table; the subset is defined by a conditional expression (called the predicate of the partial index). The index contains entries only for those table rows that satisfy the predicate. The basic syntax is as follows −
+
+CREATE INDEX index_name
+on table_name (conditional_expression);
+
+Implicit Indexes
+=================
+Implicit indexes are indexes that are automatically created by the database server when an object is created. Indexes are automatically created for primary key constraints and unique constraints.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The DROP INDEX Command
+=======================
+An index can be dropped using PostgreSQL DROP command. Care should be taken when dropping an index because performance may be slowed or improved.
+
+The basic syntax is as follows −
+
+DROP INDEX index_name;
+You can use following statement to delete previously created index −
+
+# DROP INDEX salary_index;
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+execution:-
+
+postgres=# create database day17;
+CREATE DATABASE
+postgres=# \c day17
+You are now connected to database "day17" as user "postgres".
+day17=# CREATE TABLE COMPANY(   ID INT PRIMARY KEY     NOT NULL,   NAME           TEXT    NOT NULL,   AGE            INT     NOT NULL,   ADDRESS        CHAR(50),   SALARY         REAL);
+CREATE TABLE
+day17=# CREATE TABLE AUDIT(   EMP_ID INT NOT NULL,   ENTRY_DATE TEXT NOT NULL);
+CREATE TABLE
+
+
+
+day17=# insert into COMPANY values(101,'Gurpreet Singh',22,'New Delhi',1000000000);
+INSERT 0 1
+day17=# insert into COMPANY values(102,'Mickey',23,'Noida',2000000000);
+INSERT 0 1
+day17=# insert into AUDIT values(1011,'08-08-2021');
+INSERT 0 1
+day17=# insert into AUDIT values(1012,'09-08-2021');
+INSERT 0 1
+day17=#
+
+
+day17=# select * from AUDIT;
+ emp_id | entry_date
+--------+------------
+   1011 | 08-08-2021
+   1012 | 09-08-2021
+(2 rows)
+
+
+day17=# select * from COMPANY;
+ id  |      name      | age |                      address                       | salary
+-----+----------------+-----+----------------------------------------------------+--------
+ 101 | Gurpreet Singh |  22 | New Delhi                                          |  1e+09
+ 102 | Mickey         |  23 | Noida                                              |  2e+09
+(2 rows)
+
+
+
+
+===============================================================================
+PostgreSQL CREATE INDEX overview
+A simple version of CREATE INDEX statement is as follows:
+
+CREATE INDEX index_name ON table_name [USING method]
+(
+    column_name [ASC | DESC] [NULLS {FIRST | LAST }],
+    ...
+);
+================================================================================
+To check if a query uses an index or not, you use the EXPLAIN statement.
+================================================================================
+To show the query plan, you use the EXPLAIN statement as follows:
+
+EXPLAIN SELECT *
+FROM address
+WHERE id =101;
+=================================================================================
+day17=# select * from COMPANY;
+ id  |      name      | age |                      address                       | salary
+-----+----------------+-----+----------------------------------------------------+--------
+ 101 | Gurpreet Singh |  22 | New Delhi                                          |  1e+09
+ 102 | Mickey         |  23 | Noida                                              |  2e+09
+(2 rows)
+
+
+day17=# insert into COMPANY values(103,'Max',23,'New Delhi',2000000000);
+INSERT 0 1
+day17=# insert into COMPANY values(104,'Tom',23,'New Delhi',2000000000);
+INSERT 0 1
+day17=# select * from COMPANY;
+ id  |      name      | age |                      address                       | salary
+-----+----------------+-----+----------------------------------------------------+--------
+ 101 | Gurpreet Singh |  22 | New Delhi                                          |  1e+09
+ 102 | Mickey         |  23 | Noida                                              |  2e+09
+ 103 | Max            |  23 | New Delhi                                          |  2e+09
+ 104 | Tom            |  23 | New Delhi                                          |  2e+09
+(4 rows)
+
+
+day17=# select * from COMPANY where address='New Delhi';
+ id  |      name      | age |                      address                       | salary
+-----+----------------+-----+----------------------------------------------------+--------
+ 101 | Gurpreet Singh |  22 | New Delhi                                          |  1e+09
+ 103 | Max            |  23 | New Delhi                                          |  2e+09
+ 104 | Tom            |  23 | New Delhi                                          |  2e+09
+(3 rows)
+
+
+day17=# explain select * from COMPANY where address='New Delhi';
+                        QUERY PLAN
+----------------------------------------------------------
+ Seq Scan on company  (cost=0.00..13.63 rows=1 width=248)
+   Filter: (address = 'New Delhi'::bpchar)
+(2 rows)
+
+
+day17=# create index index_address_newdelhi on COMPANY(address);
+CREATE INDEX
+day17=# select * from COMPANY where address='New Delhi';
+ id  |      name      | age |                      address                       | salary
+-----+----------------+-----+----------------------------------------------------+--------
+ 101 | Gurpreet Singh |  22 | New Delhi                                          |  1e+09
+ 103 | Max            |  23 | New Delhi                                          |  2e+09
+ 104 | Tom            |  23 | New Delhi                                          |  2e+09
+(3 rows)
+
+
+day17=# explain select * from COMPANY where address='New Delhi';
+                       QUERY PLAN
+---------------------------------------------------------
+ Seq Scan on company  (cost=0.00..1.05 rows=1 width=248)
+   Filter: (address = 'New Delhi'::bpchar)
+(2 rows)
+
+
+day17=# create index index_address_newdelhi on COMPANY(age);
+ERROR:  relation "index_address_newdelhi" already exists
+day17=# create index index_age on COMPANY(age);
+CREATE INDEX
+day17=# explain select * from COMPANY where age=22;
+                       QUERY PLAN
+---------------------------------------------------------
+ Seq Scan on company  (cost=0.00..1.05 rows=1 width=248)
+   Filter: (age = 22)
+(2 rows)
+
+
+day17=# create index index_age on COMPANY(age);
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
