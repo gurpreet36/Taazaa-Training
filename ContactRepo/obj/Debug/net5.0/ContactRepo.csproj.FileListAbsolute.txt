@@ -1,0 +1,58 @@
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\appsettings.Development.json
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\appsettings.json
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ContactRepo.exe
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ContactRepo.deps.json
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ContactRepo.runtimeconfig.json
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ContactRepo.runtimeconfig.dev.json
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ContactRepo.dll
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ref\ContactRepo.dll
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\ContactRepo.pdb
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\TaazaaTraining\Day20\ContactRepo\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.csproj.AssemblyReference.cache
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.GeneratedMSBuildEditorConfig.editorconfig
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.AssemblyInfoInputs.cache
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.AssemblyInfo.cs
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.csproj.CoreCompileInputs.cache
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.MvcApplicationPartsAssemblyInfo.cs
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.MvcApplicationPartsAssemblyInfo.cache
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\staticwebassets\ContactRepo.StaticWebAssets.Manifest.cache
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\staticwebassets\ContactRepo.StaticWebAssets.xml
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\scopedcss\bundle\ContactRepo.styles.css
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.RazorTargetAssemblyInfo.cache
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.csproj.CopyComplete
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.dll
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ref\ContactRepo.dll
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.pdb
+C:\TaazaaTraining\Day20\ContactRepo\obj\Debug\net5.0\ContactRepo.genruntimeconfig.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\appsettings.json
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ContactRepo.exe
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ContactRepo.deps.json
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ContactRepo.runtimeconfig.json
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ContactRepo.runtimeconfig.dev.json
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ContactRepo.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ref\ContactRepo.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\ContactRepo.pdb
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.csproj.AssemblyReference.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.AssemblyInfoInputs.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.AssemblyInfo.cs
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.csproj.CoreCompileInputs.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\staticwebassets\ContactRepo.StaticWebAssets.Manifest.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\staticwebassets\ContactRepo.StaticWebAssets.xml
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\scopedcss\bundle\ContactRepo.styles.css
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.RazorTargetAssemblyInfo.cache
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.csproj.CopyComplete
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ref\ContactRepo.dll
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.pdb
+C:\Users\gurpreet.singh\OneDrive - Taazaa Tech Pvt Ltd\Desktop\ContactRepo\obj\Debug\net5.0\ContactRepo.genruntimeconfig.cache
