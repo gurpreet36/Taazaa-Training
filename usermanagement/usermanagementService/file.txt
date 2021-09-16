@@ -1,0 +1,30 @@
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 5.0.7
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "PostgreSqlConnectionString": "Host=localhost;Port=5432;User ID=postgres;Password=taaza;Database=taazadbs;Pooling=true;"
+   
+   services.AddDbContext<UserDbContext>(tm=>tm.UseNpgsql(Configuration.GetConnectionString()));
+}
+
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+      "PostgreSqlConnectionString": "Host=localhost;Port=5432;User ID=postgres;Password=taaza;Database=userMgmt;Pooling=true;"
+    }
+  }
